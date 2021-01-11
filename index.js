@@ -10,4 +10,8 @@ app.get('/', (req, res)=>{
   res.render('home');
 });
 
+app.get('/air', (req, res)=>{
+  res.render('./air');
+});
+
 app.listen(3000);
