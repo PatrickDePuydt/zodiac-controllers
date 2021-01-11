@@ -11,8 +11,13 @@ app.get('/', (req, res)=>{
 });
 
 app.get('/air', (req, res) => {
-  res.render('air', {airElements: ['sand crab', 'corny joke dog']})
+  res.render('air', {airElements: ['Movement', 'Creativity', 'Action', 'Adventure', 'Exciting', 'Easily Provoked']})
 });
+
+app.get('/water', (req, res) => {
+  res.render('water', {waterElements: ['Private', 'Mysterious', 'Psychic', 'Charming', 'Emotional', 'Sensitive']})
+});
+
 app.get('/water', (req, res)=>{
   res.render('./water');
 });
