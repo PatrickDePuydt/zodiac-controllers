@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/gemini', (req, res) => {
-  res.render('air/gemini');
+  res.render('gemini');
 });
 
 module.exports = router;
