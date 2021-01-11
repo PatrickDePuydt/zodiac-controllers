@@ -1,18 +1,27 @@
 const express = require('express');
 const ejsLayouts = require('express-ejs-layouts');
-
 const app = express();
+const path = require('path');
+
 app.use(ejsLayouts);
 
 app.set('view engine', 'ejs');
+app.use(express.static(__dirname + '/public'));
+
 
 app.get('/', (req, res)=>{
   res.render('home');
 });
 
 app.get('/air', (req, res) => {
-  res.render('air', {airElements: ['Movement', 'Creativity', 'Action', 'Adventure', 'Exciting', 'Easily Provoked'], symbols: ['Leo']})
+  res.render('air', {airElements: ['Movement', 'Creativity', 'Action', 'Adventure', 'Exciting', 'Easily Provoked']});
 });
+
+app.get('/air/gemini', (req, res) => {
+  res.render('air/gemini');
+});
+
+
 
 app.get('/water', (req, res) => {
   res.render('water', {waterElements: ['Private', 'Mysterious', 'Psychic', 'Charming', 'Emotional', 'Sensitive']})
