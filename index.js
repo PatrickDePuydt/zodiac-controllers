@@ -18,16 +18,16 @@ app.get('/water', (req, res) => {
   res.render('water', {waterElements: ['Private', 'Mysterious', 'Psychic', 'Charming', 'Emotional', 'Sensitive']})
 });
 
-app.get('/water', (req, res)=>{
-  res.render('./water');
+
+app.get('/fire', (req, res) => {
+  res.render('fire', {fireElements: ['Passionate', 'Strong Emotions', 'Tempremental', 'Energetic', 'Accomplished', 'Interesting']})
 });
 
-app.get('/fire', (req, res)=>{
-  res.render('./fire');
+
+app.get('/earth', (req, res) => {
+  res.render('earth', {earthElements: ['Grounded', 'Helpful', 'Practical', 'Materialistic', 'Dependable']})
 });
 
-app.get('/earth', (req, res)=>{
-  res.render('./earth');
-});
+
 
 app.listen(3000);
