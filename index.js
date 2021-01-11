@@ -13,7 +13,6 @@ app.get('/', (req, res)=>{
   res.render('home');
 });
 
-
 app.get('/water', (req, res) => {
   res.render('water', {waterElements: ['Private', 'Mysterious', 'Psychic', 'Charming', 'Emotional', 'Sensitive']})
 });
