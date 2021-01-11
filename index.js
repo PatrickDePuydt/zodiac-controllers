@@ -10,10 +10,9 @@ app.get('/', (req, res)=>{
   res.render('home');
 });
 
-app.get('/air', (req, res)=>{
-  res.render('./air');
+app.get('/air', (req, res) => {
+  res.render('air', {airElements: ['sand crab', 'corny joke dog']})
 });
-
 app.get('/water', (req, res)=>{
   res.render('./water');
 });
